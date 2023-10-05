@@ -62,10 +62,12 @@ def draw_pipes():
 
 def check_collision(bird_y):
     for pipe in pipes:
+        # Check if bird's x position is within the pipe's width
         if (WIDTH // 2) + BIRD_WIDTH > pipe['x'] > (WIDTH // 2) - PIPE_WIDTH:
+            # Check if bird's y position is touching the top or bottom pipe
             if bird_y <= pipe['top'] or (bird_y + BIRD_HEIGHT) >= pipe['bottom']:
                 return True
-    if bird_y <= 0 or bird_y >= HEIGHT:
+    if bird_y <= 0 or bird_y >= HEIGHT:  # Check if bird is touching the top / bottom of screen
         return True
     return False
 
