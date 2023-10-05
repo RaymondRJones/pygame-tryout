@@ -4,6 +4,7 @@
 This is all python and pygame code so you can run it with
 
 `pip install pygame`
+
 `python flappy_bird.py`
 
 # Summary
